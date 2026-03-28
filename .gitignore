@@ -1,0 +1,43 @@
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# C++ / build outputs
+build/
+bin/
+dist/
+out/
+*.o
+*.obj
+*.so
+*.a
+*.lib
+*.dll
+*.exe
+
+# Logs and runtime files
+*.log
+*.pid
+*.tmp
+*.swp
+*.swo
+
+# Editors / OS noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
