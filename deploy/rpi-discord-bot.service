@@ -1,0 +1,19 @@
+[Unit]
+Description=Python Discord bot service
+After=network-online.target
+Wants=network-online.target
+ConditionPathExists=/opt/rpi-bot/bot/bot.py
+
+[Service]
+Type=simple
+User=rpi-bot
+Group=rpi-bot
+WorkingDirectory=/opt/rpi-bot/bot
+EnvironmentFile=-/etc/default/rpi-discord-bot
+ExecStart=/opt/rpi-bot/bin/run_python_bot.sh
+Restart=always
+RestartSec=5
+NoNewPrivileges=true
+
+[Install]
+WantedBy=multi-user.target
